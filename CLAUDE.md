@@ -1,9 +1,15 @@
 # PF2e Lite — Design Skeleton
 
-@.planet-smars/templates/ai-context/AGENTS.md
+@.toolbox/templates/ai-context/AGENTS.md
 
 A Next.js web app (rules reference, future character builder) built on top of
 tabletop RPG design documents.
+
+## Rules Editing Workflow
+
+The `rules/` directory contains PF2e rules text converted from AoN cache. See
+[`docs/rules-editing-guide.md`](docs/rules-editing-guide.md) for the full editing
+pipeline, global modification rules, and per-chapter status.
 
 ## Project Structure
 
