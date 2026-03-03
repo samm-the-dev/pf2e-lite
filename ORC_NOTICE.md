@@ -86,7 +86,7 @@ Calliope Lee Taylor, Andrew White, and Scott D. Young.
 Authors: James Case, Mikhail Rekun, and Mark Seifter.
 
 If you use our Licensed Material in your own published works, please credit us
-as follows: **PF2e Lite** (c) 2026, ISmarsh.
+as follows: **PF2e Lite** (c) 2026, samm-the-dev.
 
 ## Reserved Material
 
