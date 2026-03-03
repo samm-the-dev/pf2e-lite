@@ -25,6 +25,9 @@ next-env.d.ts
 # AoN API response cache (regenerable reference data)
 .aon-cache/
 
+# Windows artifacts
+nul
+
 # Environment
 .env
 .env.local

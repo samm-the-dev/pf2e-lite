@@ -1,6 +1,6 @@
 # Deploy to GitHub Pages
 # Builds Next.js static export and deploys on pushes to main
-# Adapted from .planet-smars/templates/github-workflows/deploy-gh-pages.yml
+# Adapted from .toolbox/templates/github-workflows/deploy-gh-pages.yml
 
 name: Deploy to GitHub Pages
 
@@ -40,6 +40,8 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

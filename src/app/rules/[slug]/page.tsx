@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { getDocContent, getDocSlugs, getDocTitle } from '@/lib/docs';
 
 type Props = { params: Promise<{ slug: string }> };
@@ -29,7 +30,7 @@ export default async function RulesPage({ params }: Props) {
 
   return (
     <article className="prose prose-stone mx-auto max-w-3xl prose-headings:scroll-mt-4 prose-a:text-violet-700 prose-a:no-underline hover:prose-a:underline">
-      <Markdown>{content}</Markdown>
+      <Markdown rehypePlugins={[rehypeRaw]}>{content}</Markdown>
     </article>
   );
 }

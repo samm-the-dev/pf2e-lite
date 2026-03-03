@@ -2,7 +2,7 @@
 
 > **Status:** Draft -- design decisions and evaluations. PF2e RAW ported as-is unless noted.
 >
-> **AoN reference data:** Full rules text cached in `.aon-cache/` (gitignored). Use `npm run aon -- lookup <file> <name>` for RAW.
+> **AoN reference data:** Full rules text cached outside the repo in the dev-root `.aon-cache/` directory (survives git operations). Use `npm run aon -- lookup <file> <name>` for RAW.
 
 ## Overview
 

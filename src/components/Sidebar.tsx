@@ -56,6 +56,8 @@ export default function Sidebar({ docs }: SidebarProps) {
             {docs.map(({ slug, title }) => {
               const href = `/rules/${slug}`;
               const isActive = pathname === href;
+              const chapterNum = parseInt(slug.split('-')[0], 10);
+              const label = `Ch ${chapterNum}: ${title}`;
               return (
                 <li key={slug}>
                   <Link
@@ -67,7 +69,7 @@ export default function Sidebar({ docs }: SidebarProps) {
                         : 'text-stone-600 hover:bg-stone-100 hover:text-stone-900'
                     }`}
                   >
-                    {title}
+                    {label}
                   </Link>
                 </li>
               );

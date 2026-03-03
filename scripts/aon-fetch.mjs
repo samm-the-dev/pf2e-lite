@@ -28,7 +28,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const CACHE_DIR = path.join(__dirname, '..', '.aon-cache');
+const REPO_ROOT = path.join(__dirname, '..');
+const DEV_ROOT = path.resolve(REPO_ROOT, '..');
+const CACHE_DIR =
+  process.env.AON_CACHE_DIR || path.join(DEV_ROOT, '.aon-cache');
 const API_BASE = 'https://elasticsearch.aonprd.com/aon/_search';
 
 // --- Helpers ---
@@ -165,7 +168,7 @@ function listCache() {
     return;
   }
 
-  console.log(`\n.aon-cache/ (${files.length} files)\n`);
+  console.log(`\n${CACHE_DIR} (${files.length} files)\n`);
   for (const file of files.sort()) {
     const filepath = cachePath(file);
     const stats = fs.statSync(filepath);
